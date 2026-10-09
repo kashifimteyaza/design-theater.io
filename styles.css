@@ -216,6 +216,8 @@ textarea.input { min-height: 90px; resize: vertical; }
 .tab.active { display: block; }
 
 /* cite code blocks */
+.citation-shell { margin-top: 18px; margin-bottom: 6px; }
+.citation-shell .cite-wrap { margin-bottom: 0; }
 .cite-wrap { position: relative; margin-bottom: 8px; }
 .cite-block { background: var(--color-surface); padding: 16px 20px;
   font: 13px/1.7 ui-monospace, monospace; white-space: pre-wrap; word-break: break-all;

@@ -5,11 +5,18 @@ let active = 'overview';
 
 /* tabs */
 function go(tab) {
-  active = tab;
+  const requestedTab = TABS.includes(tab) && document.querySelector(`[data-tab="${tab}"]`) && document.getElementById('tab-' + tab)
+    ? tab
+    : 'overview';
+
+  active = requestedTab;
   window.scrollTo(0, 0);
   TABS.forEach(t => {
-    document.querySelector(`[data-tab="${t}"]`).classList.toggle('active', t === tab);
-    document.getElementById('tab-' + t).classList.toggle('active', t === tab);
+    const btn = document.querySelector(`[data-tab="${t}"]`);
+    const panel = document.getElementById('tab-' + t);
+
+    if (btn) btn.classList.toggle('active', t === requestedTab);
+    if (panel) panel.classList.toggle('active', t === requestedTab);
   });
 }
 
@@ -114,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('btn-see-results')?.addEventListener('click', () => go('results'));
   document.getElementById('cite-copy-hero')?.addEventListener('click', function() { copyBibTeXHero(this); });
   document.getElementById('cite-copy-bib')?.addEventListener('click', () => copy('cite-bib'));
+  document.getElementById('cite-copy-bottom')?.addEventListener('click', () => copy('cite-bib'));
   document.getElementById('pdf-modal-close')?.addEventListener('click', closePdf);
 
   /* wire all links from LINKS in content.js — update there, not here */

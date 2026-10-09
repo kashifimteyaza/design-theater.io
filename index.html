@@ -81,14 +81,11 @@
             <div class="hero-split">
               <div>
                 <h1 class="hero-h1">
-                  <span class="d-block">The rationale sounds</span>
-                  <span class="d-block">like design.</span>
-                  <span class="d-block text-accent">The interface isn't.</span>
+                  <span class="d-block">Vibe Coding? </span>
+                  <span class="d-block">Your Agent explained its design and choices.</span>
+                  <span class="d-block text-accent">Is it reflected in the Interface ?</span>
                 </h1>
-                <p class="hero-lead">Generative UI tools narrate their own design decisions - a three-column grid,
-                  accessible contrast, keyboard-navigable tabs. We built a benchmark to check whether any of it is
-                  actually in the code. Across 120 generated interfaces, over a quarter of stated design rationales were
-                  never implemented.</p>
+                <p class="hero-lead">Generative UI tools narrate their own design decisions: a three-column grid, accessible contrast, keyboard-navigable tabs. We built a benchmark to check whether those decisions are reflected in the interfaces they generate.</p>
                 <p class="hero-sub muted">We call the gap <strong>Design Theater</strong>: plausible, confident design
                   reasoning that bears little relationship to the artifact it describes.</p>
                 <div class="hero-actions">
@@ -137,20 +134,17 @@
             <div class="study-stats">
               <div>
                 <p class="stat-num">0.75</p>
-                <p class="stat-label dim">Mean thinking fidelity - 1 in 4 rationales unmet</p>
+                <p class="stat-label dim">Mean thinking fidelity - Roughly one in four stated design rationales never appears in the interface </p>
               </div>
               <div>
                 <p class="stat-num">34%</p>
-                <p class="stat-label dim">Failure rate on functional requirements</p>
+                <p class="stat-label dim">Failure rate on functional UI tasks</p>
               </div>
               <div>
                 <p class="stat-num">0.54</p>
                 <p class="stat-label dim">Mean adherence to UX principles in the prompt</p>
               </div>
-              <div>
-                <p class="stat-num">120</p>
-                <p class="stat-label dim">Interfaces evaluated - 5 tools &times; 24 tasks</p>
-              </div>
+             
             </div>
           </section>
 
@@ -190,7 +184,7 @@
                   <p class="tool-label">Firebase</p>
                 </div>
               </div>
-              <figcaption class="tool-grid-caption dim">All 120 generated interfaces are
+              <figcaption class="tool-grid-caption dim">All generated interfaces are
                 browsable at <a id="figcaption-artifacts" href="https://design-theater.vercel.app/" target="_blank"
                   rel="noopener noreferrer">Artifacts</a>.</figcaption>
             </figure>
@@ -204,24 +198,18 @@
               <div class="row">
                 <p class="row-num">01</p>
                 <h3 class="row-h">What user-facing design reasoning is</h3>
-                <p class="row-p muted">When you ask a tool for an interface, it usually explains itself first: what it
-                  will build, which principles it is honoring, what tradeoffs it made. That explanation is written for
-                  you, not for the compiler - nothing checks it against the output.</p>
+                <p class="row-p muted">When you ask a code agent to generate an interface, it usually explains itself along the way: what it will build, which design principles it is following, which tradeoffs it is making. That explanation is written in the language of an expert designer. Yet nothing checks it against what gets built.</p>
               </div>
               <div class="row">
                 <p class="row-num">02</p>
                 <h3 class="row-h">Why the gap matters</h3>
-                <p class="row-p muted">Design Theater is not a hallucination - it is a performance of design expertise.
-                  Fluent rationales invite less scrutiny, so the people now reviewing generated interfaces (product
-                  managers, engineers, first-time creators) may accept them precisely because they read as deliberate.
+                <p class="row-p muted">Design Theater is a performance of design expertise. A fluent rationale invites less scrutiny of the interface it describes, so the people now reviewing generated interfaces (product managers, engineers, first-time creators or non-designers) may trust an interface because its explanation sounds deliberate..
                 </p>
               </div>
               <div class="row">
                 <p class="row-num">03</p>
                 <h3 class="row-h">What the benchmark adds</h3>
-                <p class="row-p muted">Three metrics make three specific failure modes auditable: unimplemented
-                  rationales, missed UX obligations that were implied rather than stated, and homogenized design
-                  defaults dressed up as situated choices.</p>
+                <p class="row-p muted">Two metrics make two failure modes auditable: design rationales that were never implemented, and UX principles the prompt implied but the tool missed. A third metric studies design homogenization: how similar the interfaces are when different tools get the same prompt.**</p>
               </div>
             </div>
           </section>
@@ -275,42 +263,13 @@
               </div>
 
               <div class="paper-pdf-panel">
-                <iframe src="assets/paper.pdf" title="Paper PDF" class="pdf-iframe"></iframe>
+                <iframe src="https://arxiv.org/pdf/2607.22928" title="Paper PDF" class="pdf-iframe"></iframe>
                 <a id="pdf-newtab" href="https://arxiv.org/pdf/2607.22928" target="_blank" rel="noopener noreferrer"
                   class="pdf-newtab-link dim">Open in new tab &#8599;</a>
               </div>
             </div>
           </section>
 
-          <hr class="hr">
-
-          <section class="section-end">
-            <span class="kicker">Cite</span>
-            <div class="cite-section">
-              <div>
-                <p class="cite-label dim">BibTeX</p>
-                <div class="cite-wrap">
-                  <div class="cite-block" id="cite-bib">@misc{imteyaz2026designtheaterbenchmarkgenerative,
-                    title = {Design Theater: A Benchmark for Generative UI},
-                    author = {Kashif Imteyaz and Kaif Imteyaz and Nakul Rajpal and Kaif Shaikh and Michael Muller and
-                    Saiph Savage},
-                    year = {2026},
-                    eprint = {2607.22928},
-                    archivePrefix = {arXiv},
-                    primaryClass = {cs.AI},
-                    url = {https://arxiv.org/abs/2607.22928}
-                    }</div>
-                  <button class="cite-copy-btn" id="cite-copy-bib" title="Copy BibTeX">
-                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-                      stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="9" y="9" width="13" height="13" rx="2" />
-                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </section>
         </main>
       </div>
 
@@ -320,21 +279,19 @@
           <section class="section-hero">
             <span class="kicker">Method</span>
             <h1 class="display-h1">
-              <span class="d-block">24 tasks, 5 tools,</span>
-              <span class="d-block">three metrics.</span>
+              <span class="d-block">24 UI generation tasks, 5 tools,</span>
+              <span class="d-block">Three metrics.</span>
             </h1>
-            <p class="section-lead">Each of the five tools received the same 24 natural-language prompts, in its default
-              configuration, with one fixed instruction: build the interface in plain HTML, CSS and JavaScript - no
-              frameworks, no libraries, no web search. For every output we captured the code, the rendered interface,
-              and the complete user-facing reasoning trace.</p>
+            <p class="section-lead">Each code agent received the same design scenarios. For every output, we captured the code, the rendered interface, and all user-facing reasoning, both in the thinking trace and in the final response.</p>
           </section>
 
           <hr class="hr">
 
           <section class="section">
-            <h2 class="section-h2">The tasks are written the way novices ask</h2>
-            <p class="section-p muted">Prompts never name a design principle. They describe users, contexts and
-              constraints - a bilingual audience, a low-end phone, a stressed reader - so the principle is implied.</p>
+            <h2 class="section-h2">The prompts are written the way non-designers will prompt</h2>
+            <p class="section-p muted">Each prompt is a design scenario with two UX principles embedded in it. The
+  prompt never names them. It describes users, contexts and constraints, and leaves the code agent to
+  recognize which principles apply.</p>
             <div class="tier-grid">
               <div class="tier-cell--left">
                 <span class="kicker">Tier 1 - Structural</span>
@@ -426,11 +383,7 @@
         <main class="page">
           <section class="section-hero">
             <span class="kicker">Results</span>
-            <h1 class="display-h1">
-              <span class="d-block">No tool delivered on</span>
-              <span class="d-block">its own reasoning.</span>
-            </h1>
-            <!-- <br> -->
+            
             <p class="hero-lead">Cross-tool mean TFS was 0.75 - roughly one stated rationale in four did not fully
               appear in the interface. Four tools clustered between 0.74 and 0.87; Firebase Studio sat well below at
               0.53.</p>
@@ -930,6 +883,24 @@
     </div>
   </div>
   <div class="page">
+    <div class="citation-shell">
+      <span class="kicker">Cite</span>
+      <div class="cite-wrap">
+        <div class="cite-block" id="cite-bib">@article{imteyaz2026design,
+  title={Design Theater: Evaluating the Gap Between User-Facing Design Reasoning and Implementation in Generative UI Tools},
+  author={Imteyaz, Kashif and Imteyaz, Kaif and Rajpal, Nakul and Shaikh, Kaif and Muller, Michael and Savage, Saiph},
+  journal={arXiv preprint arXiv:2607.22928},
+  year={2026}
+}</div>
+        <button class="cite-copy-btn" id="cite-copy-bottom" title="Copy BibTeX" type="button" aria-label="Copy BibTeX">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          </svg>
+        </button>
+      </div>
+    </div>
     <footer class="footer">
       <span>&copy; 2026 The Authors.</span>
       <span class="footer-right">Design Theater, accepted to AIES 2026.</span>
