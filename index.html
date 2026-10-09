@@ -209,7 +209,7 @@
               <div class="row">
                 <p class="row-num">03</p>
                 <h3 class="row-h">What the benchmark adds</h3>
-                <p class="row-p muted">Two metrics make two failure modes auditable: design rationales that were never implemented, and UX principles the prompt implied but the tool missed. A third metric studies design homogenization: how similar the interfaces are when different tools get the same prompt.**</p>
+                <p class="row-p muted">Two metrics make two failure modes auditable: design rationales that were never implemented, and UX principles the prompt implied but the tool missed. A third metric studies design homogenization: how similar the interfaces are when different tools get the same prompt.</p>
               </div>
             </div>
           </section>
@@ -279,7 +279,7 @@
           <section class="section-hero">
             <span class="kicker">Method</span>
             <h1 class="display-h1">
-              <span class="d-block">24 UI generation tasks, 5 tools,</span>
+              <span class="d-block">UI generation tasks, 5 tools,</span>
               <span class="d-block">Three metrics.</span>
             </h1>
             <p class="section-lead">Each code agent received the same design scenarios. For every output, we captured the code, the rendered interface, and all user-facing reasoning, both in the thinking trace and in the final response.</p>
@@ -328,7 +328,7 @@
                 </div>
                 <div>
                   <h3 class="metric-h3">Did the tool build what it said it would?</h3>
-                  <p class="metric-desc muted">We extract every concrete, checkable claim from the reasoning trace - "a
+                  <p class="metric-desc muted">We extract checkable claim from the reasoning trace - "a
                     three-column grid", "keyboard-navigable tabs". Vague claims are discarded. Two evaluators score each
                     claim against the artifact: fully implemented (1.0), partially (0.5), not at all (0.0).</p>
                   <p class="metric-formula">
@@ -342,7 +342,7 @@
                   <p class="metric-label dim">Principle Adherence Score</p>
                 </div>
                 <div>
-                  <h3 class="metric-h3">Did it honor the obligations nobody stated?</h3>
+                  <h3 class="metric-h3">To what extent do generative UI tools recognize and implement UX principles that are implicitly embedded in natural-language prompts (tasks)</h3>
                   <p class="row-p muted">Two target UX principles are chosen per prompt <em>before</em> evaluation -
                     structural tasks from information architecture, styling from WCAG, functional from Nielsen's
                     heuristics. Each scores 1 or 0; PAS is their mean.</p>
@@ -354,7 +354,7 @@
                   <p class="metric-label dim">Design Homogeneity Index</p>
                 </div>
                 <div>
-                  <h3 class="metric-h3">Do five tools quietly build the same thing?</h3>
+                  <h3 class="metric-h3">How similar are the interfaces produced by different generative UI tools?</h3>
                   <p class="metric-desc muted">All 120 interfaces are rendered as 1200 x 1200 screenshots giving ten
                     pairwise comparisons per prompt. Similarity is kept as three separate dimensions:</p>
                   <div class="dhi-dims">
@@ -576,68 +576,6 @@
               <span class="legend-item"><span class="legend-swatch legend-functional"></span>Functional</span>
             </div>
 
-            <figure class="chart-fig">
-              <div class="chart-grid">
-                <div class="chart-yaxis">
-                  <span class="chart-ytick chart-ytick--top dim">1.0</span>
-                  <span class="chart-ytick chart-ytick--mid dim">0.5</span>
-                  <span class="chart-ytick chart-ytick--bot dim">0</span>
-                </div>
-                <div class="chart-bars">
-                  <div class="chart-group">
-                    <div class="bar-wrap"><span class="bar-label">0.83</span><span class="bar-val" style="height:166px"
-                        title="Structural 0.83"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.93</span><span class="bar-val bar-styling"
-                        style="height:186px" title="Styling 0.93"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.85</span><span class="bar-val bar-functional"
-                        style="height:170px" title="Functional 0.85"></span></div>
-                  </div>
-                  <div class="chart-group">
-                    <div class="bar-wrap"><span class="bar-label">0.83</span><span class="bar-val" style="height:166px"
-                        title="Structural 0.83"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.95</span><span class="bar-val bar-styling"
-                        style="height:190px" title="Styling 0.95"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.73</span><span class="bar-val bar-functional"
-                        style="height:146px" title="Functional 0.73"></span></div>
-                  </div>
-                  <div class="chart-group">
-                    <div class="bar-wrap"><span class="bar-label">0.85</span><span class="bar-val" style="height:170px"
-                        title="Structural 0.85"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.78</span><span class="bar-val bar-styling"
-                        style="height:156px" title="Styling 0.78"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.75</span><span class="bar-val bar-functional"
-                        style="height:150px" title="Functional 0.75"></span></div>
-                  </div>
-                  <div class="chart-group">
-                    <div class="bar-wrap"><span class="bar-label">0.83</span><span class="bar-val" style="height:166px"
-                        title="Structural 0.83"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.83</span><span class="bar-val bar-styling"
-                        style="height:166px" title="Styling 0.83"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.56</span><span class="bar-val bar-functional"
-                        style="height:112px" title="Functional 0.56"></span></div>
-                  </div>
-                  <div class="chart-group">
-                    <div class="bar-wrap"><span class="bar-label">0.62</span><span class="bar-val" style="height:124px"
-                        title="Structural 0.62"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.55</span><span class="bar-val bar-styling"
-                        style="height:110px" title="Styling 0.55"></span></div>
-                    <div class="bar-wrap"><span class="bar-label">0.43</span><span class="bar-val bar-functional"
-                        style="height:86px" title="Functional 0.43"></span></div>
-                  </div>
-                </div>
-                <div></div>
-                <div class="chart-xlabels">
-                  <span class="chart-xlabel">Claude</span>
-                  <span class="chart-xlabel">Bolt</span>
-                  <span class="chart-xlabel">ChatGPT</span>
-                  <span class="chart-xlabel">Vercel v0</span>
-                  <span class="chart-xlabel">Firebase</span>
-                </div>
-              </div>
-              <figcaption class="fig-caption dim">Figure 1. Thinking Fidelity Score across the three task tiers, by
-                tool. Bars run 0 to 1.0.</figcaption>
-            </figure>
-
             <figure>
               <div class="chart-grid">
                 <div class="chart-yaxis">
@@ -696,7 +634,7 @@
                   <span class="chart-xlabel">Firebase</span>
                 </div>
               </div>
-              <figcaption class="fig-caption dim">Figure 2. Principle Adherence Score by tier. Four of five tools sit at
+              <figcaption class="fig-caption dim">Figure 1. Principle Adherence Score by tier. Four of five tools sit at
                 or below 0.06 on functional principles; Firebase Studio implemented none.</figcaption>
             </figure>
           </section>
@@ -704,10 +642,9 @@
           <hr class="hr">
 
           <section class="section-end">
-            <span class="kicker">Design Homogeneity</span>
-            <h2 class="section-h2">Five tools, one house style.</h2>
-            <p class="section-p muted">Given the same prompt, the five tools produced interfaces that differed
-              surprisingly little in overall appearance and layout. Color was the main dimension of divergence. Claude
+            <span class="kicker">Design Homogenization</span>
+            
+            <p class="section-p muted">Given the same prompt, tools produce narrow differences in visual appearance and layout, while their color choices vary most widely. Claude
               and Vercel v0 were consistently the closest pair on both visual and color distance.</p>
             <div class="tbl-wrap tbl-wrap--mb">
               <table class="dt-table">
@@ -780,7 +717,7 @@
                   <span class="range-label range-label--max" style="left:49.3%">0.211</span>
                 </div>
               </div>
-              <figcaption class="fig-caption dim">Figure 3. Spread of pairwise distances per sub-measure. Red ticks mark
+              <figcaption class="fig-caption dim">Figure 2. Spread of pairwise distances per sub-measure. Red ticks mark
                 closest/most-distant pairs; dark tick is the mean.</figcaption>
             </figure>
           </section>
@@ -798,25 +735,25 @@
                 <!-- <div class="author-avatar">KI</div> -->
                 <span><a href="https://www.kimteyaz.com/" target="_blank" rel="noopener noreferrer">Kashif
                     Imteyaz</a><sup>1*</sup></span>
-                <p class="role dim">Researcher</p>
+                <p class="role dim">PhD Candidate (*project lead)</p>
               </div>
               <div class="author-card">
                 <!-- <div class="author-avatar">KI</div> -->
                 <span><a href="https://kaif-imteyaz.github.io/" target="_blank" rel="noopener noreferrer">Kaif
                     Imteyaz</a><sup>2</sup></span>
-                <p class="role dim">Researcher</p>
+                <p class="role dim">Undergraduate Researcher</p>
               </div>
               <div class="author-card">
                 <!-- <div class="author-avatar">NR</div> -->
                 <span><a href="https://www.nakulrajpal.com/" target="_blank" rel="noopener noreferrer">Nakul
                     Rajpal</a><sup>1</sup></span>
-                <p class="role dim">Researcher</p>
+                <p class="role dim">Undergraduate Researcher</p>
               </div>
               <div class="author-card">
                 <!-- <div class="author-avatar">KS</div> -->
                 <span><a href="https://kaifshaikh.com/" target="_blank" rel="noopener noreferrer">Kaif
                     Shaikh</a><sup>3</sup></span>
-                <p class="role dim">Researcher</p>
+                <p class="role dim">Graduate Researcher</p>
               </div>
               <div class="author-card">
                 <!-- <div class="author-avatar">MM</div> -->
